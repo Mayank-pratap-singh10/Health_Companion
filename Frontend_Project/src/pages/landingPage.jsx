@@ -251,7 +251,7 @@ export default function LandingPage() {
             href={`/health-issue/${h.title
               .toLowerCase()
               .replace(/\s+/g, "-")
-              .replace("&", "and")}`} // ✅ Fix URLs with '&'
+              .replace("&", "and")}`} 
             className="group block bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 overflow-hidden"
           >
             <div className="relative h-44 overflow-hidden">

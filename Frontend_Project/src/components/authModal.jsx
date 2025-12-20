@@ -25,11 +25,11 @@ export default function AuthModal({ isOpen, onClose }) {
     const endpoint = isLogin ? "/patient/login" : "/patient/register";
     const res = await axiosInstance.post(endpoint, formData);
 
-    // 🔹 Ensure backend actually returned a token
+  
     if (res.data && res.data.token) {
-      login(res.data.token); // store JWT globally
+      login(res.data.token); 
       alert(`${isLogin ? "Login" : "Registration"} successful!`);
-      onClose(); // close modal
+      onClose(); 
     } else {
       console.error("No token in response:", res.data);
       alert("Unexpected server response. Please try again.");

@@ -63,11 +63,11 @@ export default function PatientRecords() {
           withCredentials: true,
         }
       );
-      setUploadStatus("✅ Prescription uploaded successfully!");
+      setUploadStatus(" Prescription uploaded successfully!");
       setFile(null);
     } catch (err) {
       console.error(err);
-      setUploadStatus("❌ Upload failed. Try again.");
+      setUploadStatus(" Upload failed. Try again.");
     }
   };
 

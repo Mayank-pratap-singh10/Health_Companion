@@ -156,7 +156,7 @@ export default function BookAppointment() {
         </form>
 
         <Link
-          to={`/`}/*doctor/${doctor.id} */
+          to={`/`}
           className="block text-sky-600 mt-6 hover:underline text-center"
         >
           ← Back to Dashboard

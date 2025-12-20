@@ -2,8 +2,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:4000/api/v1", // your backend base URL
-  withCredentials: true,                   // ✅ important for cookies/CORS
+  baseURL: "http://localhost:4000/api/v1", 
   headers: {
     "Content-Type": "application/json",
   },

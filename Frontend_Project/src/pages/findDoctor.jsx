@@ -41,7 +41,7 @@ export default function FindDoctor() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-cyan-100 flex items-center justify-center py-10 px-6">
       <div className="max-w-6xl w-full bg-white shadow-xl rounded-3xl overflow-hidden flex flex-col md:flex-row">
-        {/* Left Section - Image */}
+        
         <div className="md:w-1/2 bg-gradient-to-b from-blue-100 to-blue-50 flex flex-col items-center justify-center p-8">
           <img
             src={Stethoscope}
@@ -54,7 +54,7 @@ export default function FindDoctor() {
           </p>
         </div>
 
-        {/* Right Section - Form */}
+        
         <div className="md:w-1/2 p-8 bg-white relative">
           <h2 className="text-3xl font-bold text-blue-700 mb-6 text-center">
             Find a Doctor
