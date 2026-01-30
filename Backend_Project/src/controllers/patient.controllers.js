@@ -3,7 +3,7 @@ import { Patient } from "../models/patient.models.js";
 import bcrypt from "bcrypt";
 import { generateToken } from "../utils/generateToken.js";
 
-/* ---------- REGISTER ---------- */
+
 const registerPatient = asyncHandler(async (req, res) => {
   const { username, age, gender, bloodGroup, email, password } = req.body;
 
@@ -41,7 +41,7 @@ const registerPatient = asyncHandler(async (req, res) => {
   });
 });
 
-/* ---------- LOGIN ---------- */
+
 const loginPatient = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
 
