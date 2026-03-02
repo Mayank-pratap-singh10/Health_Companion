@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useNavigate } from "react-router-dom";
-import Stethoscope from "../assets/images/Stethoscope.jpg"
+import Stethoscope from "../assets/Stethoscope.jpg"
 
 export default function FindDoctor() {
   const [specialization, setSpecialization] = useState("");

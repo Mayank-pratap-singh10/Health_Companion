@@ -5,23 +5,24 @@ import { Moon, Sun } from 'lucide-react';
 import { Link } from "react-router-dom";
 import AuthModal from "../components/authModal.jsx";
 import { AuthContext } from "../context/authContext.jsx";
-import Cipla from "../assets/images/Cipla.png"
-import dettol from "../assets/images/dettol.png"
-import dolo from "../assets/images/dolo.png"
-import drReddys from "../assets/images/drReddys.png"
-import Eno from "../assets/images/Eno.png"
-import Himalaya from "../assets/images/Himalaya.png"
-import Liv52 from "../assets/images/Liv52.png"
-import Revital from "../assets/images/Revital.png"
-import savlon from "../assets/images/savlon.jpg"
-import sunPharma from "../assets/images/sunPharma.png"
-import Volini from "../assets/images/Volini.png"
-import heroImage from "../assets/images/heroImage.jpg"
-import coldFlue from "../assets/images/coldFlue.png"
-import heartHealth from "../assets/images/heartHealth.png"
-import immunity from "../assets/images/immunity.jpg"
-import Diabetes from "../assets/images/Diabetes.jpg"
-import crocinAdvance from "../assets/images/crocinAdvance.png"
+import Cipla from "../assets/Cipla.png"
+import dettol from "../assets/dettol.png"
+import dolo from "../assets/dolo.png"
+import drReddys from "../assets/drReddys.png"
+import Eno from "../assets/Eno.png"
+import Himalaya from "../assets/Himalaya.png"
+import Liv52 from "../assets/Liv52.png"
+import Revital from "../assets/Revital.png"
+import savlon from "../assets/savlon.jpg"
+import sunPharma from "../assets/sunPharma.png"
+import Volini from "../assets/Volini.png"
+import heroImage from "../assets/heroImage.jpg"
+import coldFlue from "../assets/coldFlue.png"
+import heartHealth from "../assets/heartHealth.png"
+import immunity from "../assets/immunity.jpg"
+import Diabetes from "../assets/Diabetes.jpg"
+import crocinAdvance from "../assets/crocinAdvance.png"
+import  Navbar from "../components/Navbar.jsx";
 
 
 
@@ -127,45 +128,7 @@ export default function LandingPage() {
   return (
     <div className={darkMode ? 'dark bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'}>
       
-      {/* Main Navbar */}
-       <nav className="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center space-x-3">
-            <a href=""></a><img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" alt="logo" className="h-8 w-8" />
-            <h1 className="text-xl font-bold text-sky-700 dark:text-sky-200">Health Companion</h1>
-          </div>
-          <div className="flex items-center space-x-4">
-            <span className="hidden sm:block text-sm text-gray-600 dark:text-gray-300">Serving across India 🌍</span>
-            <button onClick={toggleDarkMode} className="p-2 rounded-full bg-sky-100 dark:bg-gray-700 hover:bg-sky-200 dark:hover:bg-gray-600">
-              {darkMode ? <Sun size={18} className="text-sky-500" /> : <Moon size={18} className="text-sky-700" />}
-            </button>
-             <div className="space-x-4">
-          {user ? (
-            <>
-              <span className="text-sky-700 font-medium">
-                Welcome 👋
-              </span>
-              <button
-                onClick={logout}
-                className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-lg"
-              >
-                Logout
-              </button>
-            </>
-          ) : (
-            <button
-              onClick={() => setShowAuth(true)}
-              className="bg-sky-600 hover:bg-sky-700 text-white px-5 py-2 rounded-lg"
-            >
-              Login / Register
-            </button>
-          )}
-        </div>
-           
-
-          </div>
-        </div>
-      </nav>
+      
 
 
 

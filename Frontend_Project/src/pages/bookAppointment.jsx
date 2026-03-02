@@ -39,7 +39,7 @@ export default function BookAppointment() {
       <div className="min-h-screen flex flex-col items-center justify-center text-center bg-gray-50 text-gray-800 px-6">
         {/* <Navbar />  */}
         <div className="bg-white p-10 rounded-xl shadow-md max-w-md">
-          <h2 className="text-3xl font-bold text-sky-700 mb-4">Appointment Confirmed ✅</h2>
+          <h2 className="text-3xl font-bold text-sky-700 mb-4">Appointment Confirmed </h2>
           <p className="text-lg mb-4">
             Your appointment with <strong>{doctor.name}</strong> has been booked successfully.
           </p>
@@ -71,7 +71,7 @@ export default function BookAppointment() {
           <div>
             <h1 className="text-2xl font-bold text-sky-700">{doctor.name}</h1>
             <p className="text-gray-600">{doctor.specialization}</p>
-            <p className="text-gray-500 mt-1">⭐ {doctor.rating} | {doctor.experience}</p>
+            <p className="text-gray-500 mt-1"> {doctor.rating} | {doctor.experience}</p>
             <p className="text-gray-500 mt-1">{doctor.fees}</p>
           </div>
         </div>
