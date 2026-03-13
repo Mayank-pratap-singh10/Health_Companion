@@ -1,34 +1,28 @@
 // src/pages/LandingPage.jsx
-import { useState } from 'react';
+import { useState } from "react";
 import React, { useContext } from "react";
-import { Moon, Sun } from 'lucide-react';
+import { Moon, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
 import AuthModal from "../components/authModal.jsx";
 import { AuthContext } from "../context/authContext.jsx";
-import Cipla from "../assets/Cipla.png"
-import dettol from "../assets/dettol.png"
-import dolo from "../assets/dolo.png"
-import drReddys from "../assets/drReddys.png"
-import Eno from "../assets/Eno.png"
-import Himalaya from "../assets/Himalaya.png"
-import Liv52 from "../assets/Liv52.png"
-import Revital from "../assets/Revital.png"
-import savlon from "../assets/savlon.jpg"
-import sunPharma from "../assets/sunPharma.png"
-import Volini from "../assets/Volini.png"
-import heroImage from "../assets/heroImage.jpg"
-import coldFlue from "../assets/coldFlue.png"
-import heartHealth from "../assets/heartHealth.png"
-import immunity from "../assets/immunity.jpg"
-import Diabetes from "../assets/Diabetes.jpg"
-import crocinAdvance from "../assets/crocinAdvance.png"
-import  Navbar from "../components/Navbar.jsx";
-
-
-
-
-
-
+import Cipla from "../assets/Cipla.png";
+import dettol from "../assets/dettol.png";
+import dolo from "../assets/dolo.png";
+import drReddys from "../assets/drReddys.png";
+import Eno from "../assets/Eno.png";
+import Himalaya from "../assets/Himalaya.png";
+import Liv52 from "../assets/Liv52.png";
+import Revital from "../assets/Revital.png";
+import savlon from "../assets/savlon.jpg";
+import sunPharma from "../assets/sunPharma.png";
+import Volini from "../assets/Volini.png";
+import heroImage from "../assets/heroImage.jpg";
+import coldFlue from "../assets/coldFlue.png";
+import heartHealth from "../assets/heartHealth.png";
+import immunity from "../assets/immunity.jpg";
+import Diabetes from "../assets/Diabetes.jpg";
+import crocinAdvance from "../assets/crocinAdvance.png";
+import Navbar from "../components/Navbar.jsx";
 
 export default function LandingPage() {
   const [darkMode, setDarkMode] = useState(false);
@@ -38,213 +32,232 @@ export default function LandingPage() {
 
   const brands = [
     {
-      name: 'Cipla',
+      name: "Cipla",
       logo: Cipla,
-      desc: 'Global pharmaceutical company delivering healthcare solutions.'
+      desc: "Global pharmaceutical company delivering healthcare solutions.",
     },
     {
-      name: 'Sun Pharma',
+      name: "Sun Pharma",
       logo: sunPharma,
-      desc: 'One of India’s largest and trusted pharma brands.'
+      desc: "One of India’s largest and trusted pharma brands.",
     },
     {
-      name: 'Dr. Reddy’s',
-      logo:  drReddys,
-      desc: 'Innovation‐driven medicines and wellness products.'
+      name: "Dr. Reddy’s",
+      logo: drReddys,
+      desc: "Innovation‐driven medicines and wellness products.",
     },
     {
-      name: 'Himalaya',
-      logo:  Himalaya,
-      desc: 'Leading wellness & herbal health brand.'
-    }
+      name: "Himalaya",
+      logo: Himalaya,
+      desc: "Leading wellness & herbal health brand.",
+    },
   ];
 
   const popularProducts = [
     {
-      name: 'Crocin Advance',
+      name: "Crocin Advance",
       img: crocinAdvance,
-      brand: 'GSK',
-      price: '₹25',
-      desc: 'Fast and effective relief from headaches and fever.'
+      brand: "GSK",
+      price: "₹25",
+      desc: "Fast and effective relief from headaches and fever.",
     },
     {
-      name: 'Revital H Capsules',
-      img:  Revital,
-      brand: 'Sun Pharma',
-      price: '₹90',
-      desc: 'Vital vitamins and minerals for energy support.'
+      name: "Revital H Capsules",
+      img: Revital,
+      brand: "Sun Pharma",
+      price: "₹90",
+      desc: "Vital vitamins and minerals for energy support.",
     },
     {
-      name: 'Volini Pain Relief Spray',
+      name: "Volini Pain Relief Spray",
       img: Volini,
-      brand: 'Sun Pharma',
-      price: '₹120',
-      desc: 'Instant relief for joint and muscle pain.'
+      brand: "Sun Pharma",
+      price: "₹120",
+      desc: "Instant relief for joint and muscle pain.",
     },
     {
-      name: 'Dettol Antiseptic Liquid 550 ml',
-      img:  dettol,
-      brand: 'Reckitt',
-      price: '₹110',
-      desc: 'Trusted protection against germs and infections.'
+      name: "Dettol Antiseptic Liquid 550 ml",
+      img: dettol,
+      brand: "Reckitt",
+      price: "₹110",
+      desc: "Trusted protection against germs and infections.",
     },
     {
-      name: 'Dolo 650 Tablet 15s',
+      name: "Dolo 650 Tablet 15s",
       img: dolo,
-      brand: 'Micro Labs',
-      price: '₹30',
-      desc: 'Relief from pain & fever – trusted worldwide.'
+      brand: "Micro Labs",
+      price: "₹30",
+      desc: "Relief from pain & fever – trusted worldwide.",
     },
     {
-      name: 'Liv 52 Tablet 100s',
+      name: "Liv 52 Tablet 100s",
       img: Liv52,
-      brand: 'Himalaya',
-      price: '₹150',
-      desc: 'Herbal liver support supplement.'
+      brand: "Himalaya",
+      price: "₹150",
+      desc: "Herbal liver support supplement.",
     },
     {
-      name: 'ENO Fruit Salt Lemon Flavour',
+      name: "ENO Fruit Salt Lemon Flavour",
       img: Eno,
-      brand: 'GSK',
-      price: '₹15',
-      desc: 'Fast relief from acidity and heartburn.'
+      brand: "GSK",
+      price: "₹15",
+      desc: "Fast relief from acidity and heartburn.",
     },
     {
-      name: 'Savlon Hand Sanitizer 55 ml',
+      name: "Savlon Hand Sanitizer 55 ml",
       img: savlon,
-      brand: 'ITC',
-      price: '₹25',
-      desc: 'Kills 99.9% germs. Skin friendly.'
-    }
+      brand: "ITC",
+      price: "₹25",
+      desc: "Kills 99.9% germs. Skin friendly.",
+    },
   ];
 
   const healthIssues = [
-    { title: 'Cold & Flu', img: coldFlue },
-    { title: 'Diabetes Care', img: Diabetes },
-    { title: 'Heart Health', img: heartHealth },
-    { title: 'Immunity Boosters', img: immunity }
+    { title: "Cold & Flu", img: coldFlue },
+    { title: "Diabetes Care", img: Diabetes },
+    { title: "Heart Health", img: heartHealth },
+    { title: "Immunity Boosters", img: immunity },
   ];
 
   return (
-    <div className={darkMode ? 'dark bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'}>
-      
-      
-
-
-
+    <div
+      className={
+        darkMode ? "dark bg-gray-900 text-gray-100" : "bg-gray-50 text-gray-900"
+      }
+    >
       {/* Sub-Nav Bar */}
       <div className="bg-white dark:bg-gray-800 py-3">
         <div className="max-w-8xl mx-auto flex justify-center space-x-8 text-m font-medium text-sky-700 dark:text-sky-200">
-          
-  <Link
-    to="/find-doctor"
-    className="hover:text-sky-900 dark:hover:text-sky-300"
-  >
-    Book Appointment
-  </Link>
-  <Link to="/doctor/:id" className="hover:text-sky-900 dark:hover:text-sky-300">Find a Doctor</Link>
-          <a href="#" className="hover:text-sky-900 dark:hover:text-sky-300">Online Pharmacy</a>
           <Link
-    to="/patient-records"
-    className="hover:text-sky-900 dark:hover:text-sky-300"
-  >
-    Records
-  </Link>
+            to="/find-doctor"
+            className="hover:text-sky-900 dark:hover:text-sky-300"
+          >
+            Book Appointment
+          </Link>
+          <Link
+            to="/doctorss"
+            className="hover:text-sky-900 dark:hover:text-sky-300"
+          >
+            Find a Doctor
+          </Link>
+          <a href="#" className="hover:text-sky-900 dark:hover:text-sky-300">
+            Online Pharmacy
+          </a>
+          <Link
+            to="/patient-records"
+            className="hover:text-sky-900 dark:hover:text-sky-300"
+          >
+            Records
+          </Link>
         </div>
       </div>
 
       {/* Hero Section */}
-      
-<section
-   className="relative h-[70vh] flex flex-col justify-center items-center text-center text-sky-700"
-  style={{
-    backgroundImage:`url(${heroImage})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  }}
->
-  <div className="absolute inset-0 bg-black/40" />
 
-  <div className="relative z-10 max-w-2xl px-4">
-    <h2 className="text-5xl font-bold mb-4">Your Health, Our Priority</h2>
-    <p className="text-lg mb-6 text-gray-100">
-      Manage your health with confidence — from online pharmacy to expert consultations.
-    </p>
-    <div className="flex justify-center gap-4">
-  {!user ? (
-    // Show "Get Started" only if user not logged in
-    <button
-      onClick={() => setShowAuth(true)} 
-      className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-lg text-lg"
-    >
-      Get Started
-    </button>
-  ) : null}
+      <section
+        className="relative h-[70vh] flex flex-col justify-center items-center text-center text-sky-700"
+        style={{
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40" />
 
-  {/* Always show Book Appointment */}
-  <button
-    onClick={() => {
-      if (user) {
-        window.location.href = "/find-doctor";
-      } else {
-        setShowAuth(true);
-      }
-    }}
-    className="bg-white text-sky-700 hover:bg-gray-300 px-6 py-3 rounded-lg font-medium shadow-md transition"
-  >
-    Book Appointment
-  </button>
-</div>
+        <div className="relative z-10 max-w-2xl px-4">
+          <h2 className="text-5xl font-bold mb-4">Your Health, Our Priority</h2>
+          <p className="text-lg mb-6 text-gray-100">
+            Manage your health with confidence — from online pharmacy to expert
+            consultations.
+          </p>
+          <div className="flex justify-center gap-4">
+            {!user ? (
+              // Show "Get Started" only if user not logged in
+              <button
+                onClick={() => setShowAuth(true)}
+                className="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-lg text-lg"
+              >
+                Get Started
+              </button>
+            ) : null}
 
-    <AuthModal isOpen={showAuth} onClose={() => setShowAuth(false)} />
-  </div>
-</section>
+            {/* Always show Book Appointment */}
+            <button
+              onClick={() => {
+                if (user) {
+                  window.location.href = "/find-doctor";
+                } else {
+                  setShowAuth(true);
+                }
+              }}
+              className="bg-white text-sky-700 hover:bg-gray-300 px-6 py-3 rounded-lg font-medium shadow-md transition"
+            >
+              Book Appointment
+            </button>
+          </div>
+
+          <AuthModal isOpen={showAuth} onClose={() => setShowAuth(false)} />
+        </div>
+      </section>
 
       {/* Common Health Issues */}
       <section className="py-12 px-6 bg-gray-50 dark:bg-gray-900">
-      <h3 className="text-3xl font-bold mb-8 text-center text-sky-700 dark:text-sky-200">
-        Common Health Issues
-      </h3>
+        <h3 className="text-3xl font-bold mb-8 text-center text-sky-700 dark:text-sky-200">
+          Common Health Issues
+        </h3>
 
-      <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
-        {healthIssues.map((h, i) => (
-          <a
-            key={i}
-            href={`/health-issue/${h.title
-              .toLowerCase()
-              .replace(/\s+/g, "-")
-              .replace("&", "and")}`} 
-            className="group block bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 overflow-hidden"
-          >
-            <div className="relative h-44 overflow-hidden">
-              <img
-                src={h.img}
-                alt={`Illustration of ${h.title}`}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            </div>
-            <div className="p-4 text-center">
-              <h4 className="font-semibold text-gray-800 dark:text-gray-100">
-                {h.title}
-              </h4>
-            </div>
-          </a>
-        ))}
-      </div>
-    </section>
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          {healthIssues.map((h, i) => (
+            <a
+              key={i}
+              href={`/health-issue/${h.title
+                .toLowerCase()
+                .replace(/\s+/g, "-")
+                .replace("&", "and")}`}
+              className="group block bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1 overflow-hidden"
+            >
+              <div className="relative h-44 overflow-hidden">
+                <img
+                  src={h.img}
+                  alt={`Illustration of ${h.title}`}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+              <div className="p-4 text-center">
+                <h4 className="font-semibold text-gray-800 dark:text-gray-100">
+                  {h.title}
+                </h4>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
 
       {/* Shop by Brand */}
       <section className="py-10 px-6">
-        <h3 className="text-2xl font-semibold mb-6 text-center text-sky-700 dark:text-sky-200">Shop by Brand</h3>
+        <h3 className="text-2xl font-semibold mb-6 text-center text-sky-700 dark:text-sky-200">
+          Shop by Brand
+        </h3>
         <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {brands.map((b,i) => (
-            <div key={i} className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-lg transition p-6 text-center">
-              <img src={b.logo} alt={b.name} className="h-40 w-full mx-auto mb-3" />
-              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">{b.name}</h4>
-              <p className="text-sm text-gray-600 dark:text-gray-300">{b.desc}</p>
+          {brands.map((b, i) => (
+            <div
+              key={i}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-lg transition p-6 text-center"
+            >
+              <img
+                src={b.logo}
+                alt={b.name}
+                className="h-40 w-full mx-auto mb-3"
+              />
+              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">
+                {b.name}
+              </h4>
+              <p className="text-sm text-gray-600 dark:text-gray-300">
+                {b.desc}
+              </p>
             </div>
           ))}
         </div>
@@ -252,17 +265,37 @@ export default function LandingPage() {
 
       {/* Popular Products */}
       <section className="py-10 px-6 bg-gray-100 dark:bg-gray-800">
-        <h3 className="text-2xl font-semibold mb-6 text-center text-sky-700 dark:text-sky-200">Shop by Popular Products</h3>
+        <h3 className="text-2xl font-semibold mb-6 text-center text-sky-700 dark:text-sky-200">
+          Shop by Popular Products
+        </h3>
         <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {popularProducts.map((p,i) => (
-            <div key={i} className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-lg transition overflow-hidden">
-              <img src={p.img} alt={p.name} className="h-30 w-full object-cover mb-3" />
+          {popularProducts.map((p, i) => (
+            <div
+              key={i}
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-lg transition overflow-hidden"
+            >
+              <img
+                src={p.img}
+                alt={p.name}
+                className="h-30 w-full object-cover mb-3"
+              />
               <div className="p-4">
-                <h4 className="font-semibold text-gray-800 dark:text-gray-100">{p.name}</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-300">{p.desc}</p>
+                <h4 className="font-semibold text-gray-800 dark:text-gray-100">
+                  {p.name}
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  {p.desc}
+                </p>
                 <div className="flex justify-between items-center mt-3">
-                  <span className="font-bold text-sky-700 dark:text-sky-200">{p.price}</span>
-                  <a href="#" className="bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold px-3 py-1 rounded transition">Add to Cart</a>
+                  <span className="font-bold text-sky-700 dark:text-sky-200">
+                    {p.price}
+                  </span>
+                  <a
+                    href="#"
+                    className="bg-sky-600 hover:bg-sky-700 text-white text-sm font-semibold px-3 py-1 rounded transition"
+                  >
+                    Add to Cart
+                  </a>
                 </div>
               </div>
             </div>
@@ -270,17 +303,26 @@ export default function LandingPage() {
         </div>
       </section>
 
-      
-
       {/* Footer */}
       <footer className="bg-gray-800 text-gray-300 py-6 mt-10">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <p>&copy; {new Date().getFullYear()} Health Companion. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Health Companion. All rights
+            reserved.
+          </p>
           <div className="flex justify-center space-x-4 mt-2 text-sm">
-            <a href="#" className="hover:text-white">About</a>
-            <a href="#" className="hover:text-white">Contact</a>
-            <a href="#" className="hover:text-white">Privacy Policy</a>
-            <a href="#" className="hover:text-white">Terms</a>
+            <a href="#" className="hover:text-white">
+              About
+            </a>
+            <a href="#" className="hover:text-white">
+              Contact
+            </a>
+            <a href="#" className="hover:text-white">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-white">
+              Terms
+            </a>
           </div>
         </div>
       </footer>

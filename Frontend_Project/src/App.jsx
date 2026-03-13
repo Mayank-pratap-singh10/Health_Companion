@@ -7,11 +7,12 @@ import BookAppointment from "./pages/bookAppointment.jsx";
 import Register from "./pages/register.jsx";
 import DoctorResults from "./pages/doctorResults.jsx";
 import PatientRecords from "./pages/patientRecord.jsx";
-import login from "./pages/login.jsx";
-import about from "./pages/about.jsx";
-import contact from "./pages/contact.jsx";
-import myProfile from "./pages/myProfile.jsx";  
+import Login from "./pages/login.jsx";
+import About from "./pages/about.jsx";
+import Contact from "./pages/contact.jsx";
+import MyProfile from "./pages/myProfile.jsx";  
 import Navbar from "./components/Navbar.jsx";
+import Doctorss from "./pages/doctorss.jsx";
 
 export default function App() {
   return (
@@ -26,10 +27,12 @@ export default function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/doctor-results" element={<DoctorResults />} />
         <Route path="/patient-records" element={<PatientRecords />} />
-        <Route path="/login" element={<login />} />
-        <Route path="/about" element={<about />} />
-        <Route path="/contact" element={<contact />} />
-        <Route path="/my-profile" element={<myProfile  />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/my-profile" element={<MyProfile  />} />
+        <Route path="/doctor-deatails" element={<DoctorDetails />} />
+        <Route path="/doctorss" element={<Doctorss  />} />
 
 
       </Routes>
